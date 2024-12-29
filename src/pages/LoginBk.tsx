@@ -40,7 +40,7 @@ const LoginBk = () => {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onChange' })
     // const { register, handleSubmit, formState: { errors } } = useForm < FormType > ({ mode: 'onChange' })
     // const onSubmit = (data: FormType) => {
-    const onSubmit = (data) => {
+    const onSubmit = (data: any) => {
         console.log(data)
     }
     return (
@@ -93,7 +93,7 @@ const LoginBk = () => {
                                                     lineHeight='28px'
                                                     p='0 0.5em' />
                                             </FormLabel>
-                                            <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.email && errors.email?.message}</FormErrorMessage>
+                                            <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.email?.message as string || ''}</FormErrorMessage>
                                         </FormControl>
                                         <FormControl isInvalid={!errors.password === false} m='10px 0 14px'>
                                             <FormLabel>
@@ -112,7 +112,7 @@ const LoginBk = () => {
                                                     lineHeight='28px'
                                                     p='0 0.5em' />
                                             </FormLabel>
-                                            <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.password && errors.password?.message}</FormErrorMessage>
+                                            <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.password?.message as string || ''}</FormErrorMessage>
                                         </FormControl>
                                         <PrimaryButton type='submit'>ログイン</PrimaryButton>
                                     </form>

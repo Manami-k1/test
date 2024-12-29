@@ -9,5 +9,6 @@ export type PropsType = {
     bg?: string
 }
 export type ButtonType = {
-    type: string
+    // type: string
+    type: 'button' | 'submit' | 'reset';
 } & PropsType

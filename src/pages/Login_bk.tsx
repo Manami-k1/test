@@ -9,7 +9,7 @@ import { FormErrorMessage } from '@chakra-ui/react';
 
 const Login_bk = () => {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onChange' })
-    const onSubmit = (data) => {
+    const onSubmit = (data: any) => {
         console.log(data)
     }
     return (
@@ -28,7 +28,7 @@ const Login_bk = () => {
                             })}
                             />
                         </FormLabel>
-                        <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.email?.message}</FormErrorMessage>
+                        <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.email?.message as string || ''}</FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={!errors.password === false} m='10px 0 14px'>
                         <FormLabel>
@@ -42,7 +42,7 @@ const Login_bk = () => {
                             })}
                             />
                         </FormLabel>
-                        <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.password?.message}</FormErrorMessage>
+                        <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.password?.message as string || ''}</FormErrorMessage>
                     </FormControl>
                     <PrimaryButton type='submit'>ログイン</PrimaryButton>
                 </form>
