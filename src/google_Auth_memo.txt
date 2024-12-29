@@ -1,0 +1,38 @@
+import React, { useState } from 'react';
+
+const GoogleLoginButton = () => {
+    const [loggedIn, setLoggedIn] = useState(false);
+
+    const handleLogin = () => {
+        window.gapi.auth2.getAuthInstance().signIn()
+            .then(() => {
+                setLoggedIn(true);
+                // ログイン成功時の処理を追加
+            })
+            .catch(error => {
+                console.error('Google Sign-In Error:', error);
+            });
+    };
+
+    return (
+        <button onClick={handleLogin}>
+            {loggedIn ? 'Logged In' : 'Log In with Google'}
+        </button>
+    );
+};
+
+export default GoogleLoginButton;
+
+// React で Google Sign-In を実装する場合、以下の手順に従うことが一般的です。
+
+// Google Developer Console でプロジェクトを作成: Google Developers Console で新しいプロジェクトを作成し、OAuth 2.0 クライアント ID を作成します。
+
+// Google Sign-In API を有効化: プロジェクトで Google Sign-In API を有効化します。
+
+// React アプリに Google Sign-In ライブラリを追加: Google Sign-In の機能を利用するために、Google Sign-In ライブラリを React アプリに追加します。
+
+// Google Sign-In ボタンを作成: React コンポーネントで Google Sign-In ボタンを作成し、ユーザーがクリックすると Google のログインフローが開始されるようにします。
+
+// Google Sign-In ボタンのクリックイベントを処理: ボタンがクリックされたときに Google Sign-In ライブラリの signIn メソッドを呼び出し、ユーザーがログインするためのフローを開始します。
+
+// ログイン成功時の処理: Google のログイン成功時に、ユーザーの情報を取得し、必要な処理を実行します。これには、ユーザーの認証情報をサーバーに送信したり、アプリケーション内でのセッションの管理などが含まれます。

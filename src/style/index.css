@@ -1,0 +1,17 @@
+body {
+    margin: 0px;
+    font-size: 12px;
+    line-height: 1.6;
+    /* background: url(../assets/imgs/bg_black.png); */
+    color: #4d4d4d;
+}
+
+ul,
+ol {
+    padding-left: 0;
+}
+
+a {
+    color: #4d4d4d;
+    line-height: 1.5;
+}
