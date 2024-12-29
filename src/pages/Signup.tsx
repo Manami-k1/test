@@ -2,13 +2,12 @@ import {
     FormControl, Text, Divider, FormLabel, FormErrorMessage, Input, Heading, Link,
 } from "@chakra-ui/react"
 import { useForm } from "react-hook-form"
-import PrimaryButton from "../atoms/Button/PrimaryButton"
 import PageTepmlate from "../templates/PageTemplates/PageTemplate"
 import DefaultTemplate from "../templates/MainTemplate/DefaultTemplate"
 import AuthTemplate from "../templates/MainTemplate/AuthTemplate"
 
 const Signup = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onChange' })
+    const { handleSubmit, formState: { errors } } = useForm({ mode: 'onChange' })
     // const { register, handleSubmit, formState: { errors } } = useForm < FormType > ({ mode: 'onChange' })
     // const onSubmit = (data: FormType) => {
     const onSubmit = (data: any) => {
