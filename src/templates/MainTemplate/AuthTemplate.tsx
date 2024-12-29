@@ -30,7 +30,7 @@ const AuthTemplate: FC<PropsType> = ({ children }) => {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onChange' })
     // const { register, handleSubmit, formState: { errors } } = useForm < FormType > ({ mode: 'onChange' })
     // const onSubmit = (data: FormType) => {
-    const onSubmit = (data) => {
+    const onSubmit = (data: any) => {
         console.log(data)
     }
     return (

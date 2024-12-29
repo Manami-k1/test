@@ -11,7 +11,7 @@ const Signup = () => {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onChange' })
     // const { register, handleSubmit, formState: { errors } } = useForm < FormType > ({ mode: 'onChange' })
     // const onSubmit = (data: FormType) => {
-    const onSubmit = (data) => {
+    const onSubmit = (data: any) => {
         console.log(data)
     }
     return (
@@ -28,7 +28,7 @@ const Signup = () => {
                                 <Input type="checkbox" />
                                 <Link href='/management' textDecoration='underline' color='#ffb727'>利用規約/プライバシーポリシー</Link>に同意する
                             </FormLabel>
-                            <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.email && errors.email?.message}</FormErrorMessage>
+                            <FormErrorMessage fontSize='0.8em' color='#e85c5c'>{errors.email?.message as string || ''}</FormErrorMessage>
                         </FormControl>
                     </form>
                     <Text fontSize='0.96em' m='14px 0'>アカウント登録がお済みの方は<br /><Link href='/login' textDecoration='underline' color='#ffb727'>ログイン画面</Link>へ</Text>

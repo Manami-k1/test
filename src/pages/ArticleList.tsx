@@ -5,7 +5,7 @@ import {
     HStack,
     Link,
     Stack,
-    Tabs, Tab, Span
+    Tabs, Tab,
 } from "@chakra-ui/react"
 import { EditIcon, Search2Icon } from "@chakra-ui/icons"
 import PrimaryButton from "../atoms/Button/PrimaryButton"
