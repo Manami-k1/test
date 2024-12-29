@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-    Box, Flex, Switch, FormControl, FormLabel, Container, Avatar, Text, Button, Link,
+    Box, Flex, FormControl, FormLabel, Container, Text,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
@@ -10,10 +10,7 @@ import PrimaryButton from "../atoms/Button/PrimaryButton"
 import { useForm } from "react-hook-form";
 import { FormErrorMessage } from '@chakra-ui/react';
 
-// type FormType = {
-//     email: string,
-//     password: string
-// }
+
 
 const BoxStyle = styled(Box)`
 position: relative;

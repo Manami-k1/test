@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import { Box, Container, FormControl, FormLabel, Heading, Input, Text, Link, Divider, FormErrorMessage } from '@chakra-ui/react';
-import PrimaryButton from '../../atoms/Button/PrimaryButton';
+import { Box, Container } from '@chakra-ui/react';
+
 import { PropsType } from '../../types';
-import DefaultTemplate from './DefaultTemplate';
-import { useForm } from "react-hook-form";
+
+
 
 const BoxStyle = styled(Box)`
 position: relative;
@@ -27,12 +27,8 @@ span {
     }
 `
 const AuthTemplate: FC<PropsType> = ({ children }) => {
-    const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onChange' })
-    // const { register, handleSubmit, formState: { errors } } = useForm < FormType > ({ mode: 'onChange' })
-    // const onSubmit = (data: FormType) => {
-    const onSubmit = (data: any) => {
-        console.log(data)
-    }
+
+
     return (
         <Container h='100%' p='70px 0'>
             <BoxStyle bg='#fff' w='100%' maxW='560px' h='100%' m='auto' boxShadow='#00000037 0 0 10px' pos='relative'>

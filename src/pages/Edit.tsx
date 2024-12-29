@@ -1,5 +1,5 @@
 import {
-    FormControl, Text, Divider, FormLabel, FormErrorMessage, Input, Heading, Link,
+    Text, Heading,
     Container, Flex, Grid, Box,
 } from "@chakra-ui/react"
 import { EditIcon } from "@chakra-ui/icons"

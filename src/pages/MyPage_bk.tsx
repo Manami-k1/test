@@ -13,16 +13,12 @@ import PrimaryButton from "../atoms/Button/PrimaryButton"
 
 const LinkBoxStyle = styled(LinkBox)`
 position: relative;
-/* background-color: #fff; */
-/* box-shadow:#0000004f 0 0 6px; */
-/* padding: 1.4em 1em; */
-/* margin: 6px; */
 background-color: #fff;
 padding: 1.4em 1em;
 border: #ccc 2px solid;
 margin-bottom: 0.9em;
 
- /* bg={'#fffdee'} p='1.4em 1em' border={'#ccc 2px solid'} mb={'0.9em'} */
+ 
 &:hover {
 cursor: pointer;
 opacity: 0.8;
@@ -50,8 +46,7 @@ const CardStyle = styled(Card)`
 position: relative;
 background-color: #fff;
 box-shadow:#00000057 0 0 6px;
-/* padding: 1.4em 1em;
-margin: 6px; */
+
 span {
    z-index: 10;
 }
@@ -70,13 +65,6 @@ span {
     }
 `
 
-// overflow: hidden;
-//   display: -webkit-box;
-//   text-overflow: ellipsis;
-//   -webkit-box-orient: vertical;
-//   -webkit-line-clamp: 3;
-/* ブラウザがサポートしていない場合のフェールセーフ */
-//   max-height: 24px;
 
 
 const MyPageBk = () => {
